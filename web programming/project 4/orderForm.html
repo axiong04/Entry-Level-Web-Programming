@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--allen-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EXOCUBE</title>
+	<meta name = "Author" content = "Allen">
+	<meta name = "description" content = "Computer Science Teacher Career">
+	<meta name = "keywords" content = "computer science career job teacher school upper arlington">
+	<meta name = "copyright" content = "2022">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.orderButton {
+	background-color:#FE4A49;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 24px;
+	text-decoration:none;
+}
+.orderButton:hover {
+	background-color:#b34332;
+}
+.orderButton:active {
+	position:relative;
+	top:1px;
+}
+
+		body{
+			background-color: #FFF;
+		}
+
+header, footer{
+	background-color: #272932;
+	margin: -20px;
+	font-family: "Courier New";
+	color: white;
+	text-align: center;
+}
+body, html {
+  height: 100%;
+  	font-family: "Courier New";
+}
+
+	</style>
+
+	<link rel="icon" href="cube.ico" type="image/x-icon">
+</head>
+<body>
+	<!--https://coolors.co/a0e7ae-9ecce7-fe4a49-0f7173-272932-->
+	<header>
+		<div class="center"><br><canvas width = "200" height = "200" id = "logo" class="logo"></canvas><canvas width="400" height="200" id="naming" class="naming"></canvas><br><br></div>	
+	</header>
+	<br>
+	<br>
+	<form method="post" action=mailto:dkhale@uaschools.org enctype="text/plain">
+	<!--user input-->
+	<br> <input type="text" name="name" placeholder = "Name" required> <br> 
+ <br> <input type="text" name="email" placeholder = "Email"> <br> 
+<br> <input type="text" name="phone" placeholder = "Phone Number"> <br>
+<br><select name="type"> 
+<option value="1">1 x 1 Cube</option> 
+<option value=".5">(0.5 + 0.5) x (0.5 + 0.5) Cube</option> 
+<option value="4pow0">4^0 x 4^0 Cube</option> 
+</select>
+<br>
+<br><input type="radio" id="1" name="Delivery" value="1 day">
+<label for="html">1 Day Delivery</label><br>
+<input type="radio" id="2" name="Delivery" value="2 day">
+ <label for="2">2 Day Delivery</label><br>
+ <input type="radio" id="3" name="Delivery" value="3 day">
+ <label for="javascript">3 Day Delivery</label>
+<br>
+<br><input type="submit" value="Submit" class="myButton" onclick="alert('Your order has been submitted!')">
+
+</form>
+  <br>
+  <br>
+  <br>
+<div class=caption><a href="project4.html" class="orderButton">Back</a></div>
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<footer>
+      <br>&copy;Allen 2022<br>Disclaimer: This is a fictional business created in a Web Programming class for the purpose of learning HTML and CSS. No products or services are actually for sale.<br><a href="mailto:dkhale@uaschools.org" style="color: #CCF;">dkahle@uaschools.org<a><br><br>
+ 
+</footer>
+	<script type="text/javascript" src="cube.js"></script>
+    <script type="text/javascript" src="name.js"></script>
+</body>
+</html>

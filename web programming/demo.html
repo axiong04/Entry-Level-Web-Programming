@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    var div = $("div");  
+    $( "#bruh" ).animate({fontSize: '3em'}, "slow");
+    $( "#bruh" ).animate({fontSize:'1em'}, "slow");
+  });
+});
+
+</script> 
+<style>
+  body{
+    cursor: none;
+  } 
+.bouncing-text {
+  position: relative;
+  display: flex;
+  font-size: 70px;
+  font-weight: 900;
+}
+
+.b, .o, .u, .n, .c, .e .y {
+  position: relative;
+}
+
+.b {
+  animation: bounce 1s ease infinite;
+  -webkit-animation: bounce 1s ease infinite;
+}
+
+.o {
+  animation: bounce 1s ease infinite .1s;
+  -webkit-animation: bounce 1s ease infinite .1s;
+}
+
+.u {
+  animation: bounce 1s ease infinite .2s;
+  -webkit-animation: bounce 1s ease infinite .2s;
+}
+
+.n {
+  animation: bounce 1s ease infinite .3s;
+  -webkit-animation: bounce 1s ease infinite .3s;
+}
+
+.c {
+  animation: bounce 1s ease infinite .4s;
+  -webkit-animation: bounce 1s ease infinite .4s;
+}
+
+.e {
+  animation: bounce 1s ease infinite .5s;
+ -webkit-animation: bounce 1s ease infinite .5s;
+}
+
+.y {
+  animation: bounce 1s ease infinite .6s;
+ -webkit-animation: bounce 1s ease infinite .6s;
+}
+
+ @keyframes bounce {
+        0%   { transform: scale(1,1) translateY(0); }
+        10%  { transform: scale(1.1,.9) translateY(0); }
+        30%  { transform: scale(.9,1.1)   translateY(-55px);}
+        50%  { transform: scale(1.05,.95) translateY(0); }
+        58%  { transform: scale(1,1) translateY(-7px); }
+        65%  { transform: scale(1,1) translateY(0);}
+        100% { transform: scale(1,1) translateY(0);}
+    }
+
+@-webkit-keyframes bounce {
+       0%   { transform: scale(1,1) translateY(0); }
+        10%  { transform: scale(1.1,.9) translateY(0); }
+        30%  { transform: scale(.9,1.1)   translateY(-55px);}
+        50%  { transform: scale(1.05,.95) translateY(0); }
+        58%  { transform: scale(1,1) translateY(-7px);}
+        65%  { transform: scale(1,1) translateY(0);}
+        100% { transform: scale(1,1) translateY(0);} 
+}
+
+.bouncing-text:before {
+  left:0;
+  animation: scale 1s linear infinite;
+  -webkit-animation: scale 1s linear infinite;
+}
+
+@keyframes scale {
+  0% {transform: scaleX(1);}
+  25% {transform: scaleX(0.4);}
+  50% {transform: scaleX(1);}
+  75% {transform: scaleX(0.9);}
+  100% {transform: scaleX(1);}
+}
+
+@-webkit-keyframes scale {
+  0% {transform: scaleX(1);}
+  25% {transform: scaleX(0.4);}
+  50% {transform: scaleX(1);}
+  75% {transform: scaleX(0.9);}
+  100% {transform: scaleX(1);}
+}
+
+.bouncing-text:after {
+  left: 57px;
+  animation: scale 1s linear infinite .1s;
+  -webkit-animation: scale 1s linear infinite .1s;
+}
+
+div.text {
+  background: linear-gradient(-40deg, Red, Orange, Yellow, Green, Blue, Purple);
+  background-size: 300%;
+
+  font-weight: 900;
+  font-size: 5vw;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: animated_text 3s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+  0% { background-position: 0px 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0px 50%; }
+}
+
+.cursor{
+  z-index: 999;
+  position: fixed;
+  background: Red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+    box-shadow: 0 0 20px red, 0 0 60px red, 0 0 100px red;
+  animation: colors 5s infinite;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@keyframes colors{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+.cursor:before{
+ content: '';
+ position: absolute;
+ background: red;
+ width: 33px;
+ height: 33px;
+ opacity: .2;
+ transform: translate(-20%, -20%);
+ border-radius: 50%;
+}
+
+</style>
+</head>
+<body>
+<div class="cursor"></div>
+<script type="text/javascript">
+  const cursor = document.querySelector(".cursor");
+    var timeout;
+
+    document.addEventListener("mousemove", (e) => {
+    let x = e.pageX;
+    let y = e.pageY;
+
+    cursor.style.top = y + "px";
+    cursor.style.left = x + "px";
+    cursor.style.display = "block";
+
+    function mouseStopped(){
+      cursor.style.display = none; 
+    }
+    clearTimeout(timeout);
+    timeout = setTimeout(mouseStopped, 1000);
+    });
+
+    document.addEventListener("mouseOut", () => {
+    cursor.style.display = "none";
+    });
+</script>
+
+<button>Play</button>
+
+<div id="bruh" style="background:WHITE;height:100px;width:900px;position:absolute;">.jquery animate() method</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="text">webkit animation</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="text">
+<div class="bouncing-text">
+  <div class="b"><br>He</div>
+  <div class="o"><br>&nbsp;</div>
+  <div class="u"><br>He</div>
+  <div class="n"><br>&nbsp;</div>
+  <div class="c"><br>He</div>
+  <div class="e"><br>&nbsp;</div>
+  <div class="y"><br>Haw</div>  
+</div>
+</div>
+</body>
+</html>

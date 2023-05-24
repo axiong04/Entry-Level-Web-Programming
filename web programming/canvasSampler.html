@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#logo
+		{
+			border: solid gray; 5px;
+			float: right;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="logo" width="600" height="400"></canvas>
+	<script>
+		var cnv = document.getElementById('logo');
+		var ctx = cnv.getContext('2d');
+
+		var grd = ctx.createRadialGradient (300, 200, 10, 300, 200, 360);	
+	 	grd.addColorStop(0, "gray");
+		grd.addColorStop(0.5, "gold");
+		grd.addColorStop(1, "gray");
+		ctx.fillStyle = grd;
+		ctx.fillRect(0, 0, 600, 400);
+		ctx.fillStyle = "white";
+		ctx.font = '60px "arial bold"';
+		ctx.fillText('HTML 5', 225, 150);
+		ctx.fillText('CSS 3', 250, 250);8798
+		ctx.fillStyle = 'red'; //red filled rect
+		ctx.fillRect(25,50, 300,200);
+
+		ctx.strokeStyle = 'blue';//blue rect
+		ctx.lineWidth = '10';
+		ctx.strokeRect(360, 120, 200, 240);
+
+		ctx.beginPath();//small circle
+		ctx.fillStyle = 'green';
+		ctx.arc (100, 300, 25, 0, Math.PI*2, true);
+		ctx.fill();
+		ctx.closePath();
+
+		ctx.beginPath(); 
+		ctx.strokeStyle ='purple'; // sets color
+		ctx.lineWidth = '5'; // sets width
+		ctx.moveTo(100, 150); // sets starting point
+		ctx.lineTo(100,200); // sets endpoint
+		ctx.stroke(); // draws line
+		ctx.closePath(); // Ends element
+
+		ctx.fillStyle = 'orange'; //  color
+		ctx.font = '5px “Times New Roman”'; //font
+		ctx.fillText('allen', 70, 120);
+	</script>
+</body>
+</html>

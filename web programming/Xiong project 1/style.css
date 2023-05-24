@@ -1,0 +1,138 @@
+.css-typing p {
+  border-right: .15em solid orange;
+  font-family: "Georgia";
+  font-size: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+/*selected font and stuff up here*/
+
+/*below here, you can change how fast the animation plays and the delay before it starts"*/
+.css-typing p:nth-child(1) {
+  width: 14.2em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/*animation for "founding father extordinare"*/
+
+.css-typing p:nth-child(2) {
+  width: 7.2em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 1s steps(40, end);
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/*animation for "genuis inventor"*/
+
+.css-typing p:nth-child(3) {
+  width: 9.7em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 1.3s steps(40, end);
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/*animation for "profound philosopher"*/
+
+
+
+/*down here is for the orange cursor thingy"*/
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+<!--source: https://css-tricks.com/snippets/css/typewriter-effect/, but edited by allen-->
